@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="max-w-lg mx-auto">
+    <h3 class="font-bold text-center text-2xl mt-4">Add Sorcer</h3>
+    <div class="box">
+        <form method="POST" action="{{ url_for('sorcers.add_sorcer') }}" class="mt-5">
+            <div>
+                <div class="control">
+                    <input class="w-full border border-black p-2" type="text" name="name" placeholder="Name" required>
+                </div>
+            </div>
+
+            <div>
+                <div class="control">
+                    <input class="w-full border border-black p-2 mt-3" type="text" name="technique_name" placeholder="Technique Name" required>
+                </div>
+            </div>
+
+            <div>
+                <div class="control">
+                    <textarea class="w-full border border-black p-2 mt-3" name="technique_description" placeholder="Technique Description"></textarea>
+                </div>
+            </div>
+
+            <div>
+                <div class="control">
+                    <input class="w-full border border-black p-2 mt-3" type="number" name="technique_rating" placeholder="Technique Rating" required>
+                </div>
+            </div>
+
+            <div>
+                <div class="control">
+                    <input class="w-full border border-black p-2 mt-3" type="number" name="technique_strength" placeholder="Technique Strength" required>
+                </div>
+            </div>
+
+            <button class="mt-5 px-6 bg-indigo-600 text-white py-2">Add Sorcer</button>
+        </form>
+    </div>
+</div>
+{% endblock %}
